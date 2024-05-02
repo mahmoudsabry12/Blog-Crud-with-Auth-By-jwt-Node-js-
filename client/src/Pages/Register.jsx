@@ -16,16 +16,25 @@ const Register = () => {
         .catch(err => console.log(err))
     }
   return (
-    <div>
+    <div className='Register'>
     <form onSubmit={handleSubmit}>
     <input 
+     type='Name'
+    placeholder='Enter Your Name'
         onChange={(e)=> setName(e.target.value)}
+        required
     />
     <input 
+     type='email'
+    placeholder='Enter Your Email'
         onChange={(e)=> setEmail(e.target.value)}
+        required
     />
     <input 
+     type='password'
+    placeholder='Enter Your Password'
         onChange={(e)=> setPassword(e.target.value)}
+        required
     />
 <button>Register</button>
 </form>

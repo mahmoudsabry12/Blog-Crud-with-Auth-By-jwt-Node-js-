@@ -19,7 +19,7 @@ const Dashboard = () => {
         .catch(err => console.log(err))
     })
   return (
-    <h2>Dashboard {message}</h2>
+    <h2 style={{color:"white"}}> Welcome to  Dashboard {message}</h2>
   )
 }
 

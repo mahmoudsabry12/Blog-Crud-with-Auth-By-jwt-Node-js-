@@ -1,1 +1,46 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto ;
+    background-color: rgb(12, 66, 79);
+}
 
+.Login {
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    background-color: rgb(47, 255, 0);
+    margin-top: 30vh;
+    border-radius: 20px;
+}
+.Register{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    height: 70vh;
+    background-color: rgb(0, 191, 255);
+    margin-top: 20vh;
+}
+form{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+form input , button{
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    padding: 15px 0;
+}
+.Login form  button {
+    background-color: rgb(23, 130, 75);
+    font-size: 32px;
+    color: aliceblue;
+}
+.Register form  button {
+    background-color: rgb(5, 144, 243);
+    font-size: 32px;
+    color: aliceblue;
+}

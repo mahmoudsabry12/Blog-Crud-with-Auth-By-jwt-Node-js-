@@ -25,16 +25,22 @@ const Login = () => {
         .catch(err => console.log(err))
     }
   return (
-    <div>
+    <div className='Login'>
     <form onSubmit={handleSubmit}>
     
     <input 
+    type='email'
+    placeholder='Enter Your Email'
         onChange={(e)=> setEmail(e.target.value)}
+        required
     />
     <input 
+    type='password'
+    placeholder='Enter Your Password'
         onChange={(e)=> setPassword(e.target.value)}
+        required
     />
-<button>Register</button>
+<button>Login</button>
 </form>
     </div>
   )
