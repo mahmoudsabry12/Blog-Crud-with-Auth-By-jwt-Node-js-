@@ -3,11 +3,14 @@ const mongoose = require('mongoose')
 const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
+const { swaggerUi, specs } = require('./Swagger');
 
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const cookieParser = require("cookie-parser")
 const StudentModel = require('./models/Student')
+
+// const authRoutes = require('./routes/authRoutes'); Import authRoutes
 
 const app = express()
 app.use(express.json())
@@ -37,8 +40,11 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
+//Swagger 
+// Serve Swagger UI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
-
+//app.use(authRoutes);  Use the routes
 
 app.post('/register', (req, res) => {
   const {name, email, password} = req.body;

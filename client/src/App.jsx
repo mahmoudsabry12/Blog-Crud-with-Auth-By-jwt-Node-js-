@@ -1,5 +1,6 @@
 
 import './App.css'
+import Blog from './Pages/Blog';
 import  Dashboard  from './Pages/Dashboard';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
@@ -16,6 +17,7 @@ function App() {
         <Route path='/register' element={<Register />}  />
         <Route path='/login' element={<Login />}  />
         <Route path='/dashboard' element={<Dashboard />}  />
+        <Route path='/blog' element={<Blog />}  />
       </Routes>
     </BrowserRouter>
   )
